@@ -64,6 +64,49 @@ Roteamento (App.js):
 
 Header.js / Footer.js → componentes fixos em todas as páginas
 
+# logica
+
+                   ┌───────────────┐
+                   │  Usuário      │
+                   └──────┬────────┘
+                          │
+          ┌───────────────┼───────────────────┐
+          │                               │
+      Clica em                        Clica em blog
+      mapa / card                         │
+          │                               │
+          ▼                               ▼
+ ┌───────────────────┐           ┌───────────────────┐
+ │   Home.js         │           │    Blog.js        │
+ │ (Página Inicial)  │           │ Lista de posts    │
+ │ ┌───────────────┐ │           │                   │
+ │ │  MapView.js   │ │           │  BlogList.js      │
+ │ │ (Mapa + marc.)│ │           └───────────────────┘
+ │ └───────────────┘ │                   │
+ └─────────┬─────────┘                   ▼
+           │                       Clica em post
+           ▼
+ ┌───────────────────┐
+ │ SpaceDetail.js    │
+ │ (Detalhes do espaço)
+ │ ┌───────────────┐ │
+ │ │ SpaceCard.js  │ │
+ │ └───────────────┘ │
+ └─────────┬─────────┘
+           │
+           ▼
+     Informações do
+       Firestore
+   ┌────────────────┐
+   │   Collection   │
+   │    spaces      │
+   └────────────────┘
+
+Firestore (blog_posts)
+   │
+   ▼
+Blog.js / BlogPost.js → Renderizam posts
+
 # Autor
 
 João Claudiano
