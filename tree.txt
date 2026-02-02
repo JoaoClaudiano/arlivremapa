@@ -1,0 +1,23 @@
+outdoor-map/
+├─ public/                  # arquivos estáticos (favicon, index.html)
+│   ├─ favicon.ico
+│   └─ index.html
+├─ src/
+│   ├─ components/
+│   │   ├─ Header.js
+│   │   ├─ Footer.js
+│   │   ├─ MapView.js
+│   │   ├─ SpaceCard.js
+│   │   ├─ BlogList.js
+│   │   └─ BlogPost.js
+│   ├─ pages/
+│   │   ├─ Home.js
+│   │   ├─ SpaceDetail.js
+│   │   └─ Blog.js
+│   ├─ firebase.js          # configuração do Firebase
+│   ├─ App.js
+│   ├─ index.js
+│   └─ styles.css
+├─ .gitignore
+├─ package.json
+└─ README.md
